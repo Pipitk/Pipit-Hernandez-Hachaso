@@ -1,7 +1,7 @@
 import os
 import sys
 if sys.platform == "win32":
-    os.environ["WERKZEUG_RUN_MAIN"] = "true"  # Fixes some import issues
+    os.environ["WERKZEUG_RUN_MAIN"] = "true"
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -65,5 +65,5 @@ def get_courses():
     return jsonify(courses), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=False)  # Prevents circular import issues
+    app.run(debug=True, threaded=False) 
 
