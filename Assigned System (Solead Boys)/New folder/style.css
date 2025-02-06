@@ -1,0 +1,167 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: 0;
+    list-style: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #3af8b9;
+    --color-danger: #ff6363;
+    --color-white: #ffffff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000000;
+    --color-bg: #1e1c3f;
+    --color-bg1: #141233;
+    --color-bg2: #3c396d;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: "Lexend Giga", sans-serif;
+    background: var(--color-bg);
+    color: var(--color-light);
+    line-height: 1.7;
+}
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--color-white);
+}
+.btn{
+    display: inline-block;
+    background: var(--color-black);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight:500;
+    transition: var(--transition);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-dangercolor-);
+    color: var(--color-white);
+}
+
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 4rem;
+    position: fixed;
+    width: 95vw;
+    height: 25%;
+    top: 0;
+    background: transparent;
+    z-index: 11;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.nav_menu li a {
+    color: var(--color-light);
+}
+
+header {
+    margin-top: 5rem;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    position: relative;
+    gap: 5rem;
+}
+
+header img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0 2.4rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.login_container, .add-course_container, .view-courses_container {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, select, textarea, .btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--color-success);
+}
+
+.courses-list .course-item {
+    background: var(--color-bg1);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: var(--color-light);
+}

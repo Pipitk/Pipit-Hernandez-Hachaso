@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Portal</title>
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav_container">
+            <a href="#"><h4>SOLEDAD BOYS</h4></a>
+            <ul class="nav_menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#login" id="login-link">Login</a></li>
+                <li style="display: none;" id="logout-link"><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="container header_container">
+            <div class="header_left">
+                <h1>Welcome to Soledad Boys</h1>
+                <p>Empowering students and teachers with tools for success in education.</p>
+                <a href="#login" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="header_right">
+                <img src="https://source.unsplash.com/800x600/?education" alt="Education Image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login" class="login">
+        <div class="container login_container">
+            <h2>Login</h2>
+            <form id="login-form" class="login_form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+                <div class="form-group" id="teacher-passcode-group" style="display: none;">
+                    <label for="passcode">Passcode</label>
+                    <input type="password" id="passcode" name="passcode" placeholder="Enter passcode (if teacher)">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Add Course Section -->
+    <section id="add-course" class="add-course" style="display: none;">
+        <div class="container add-course_container">
+            <div class="add-course_left">
+                <h2>Add a Course</h2>
+                <form id="add-course-form" class="add-course_form">
+                    <div class="form-group">
+                        <label for="course-name">Course Name</label>
+                        <input type="text" id="course-name" name="course-name" placeholder="Enter the course name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-description">Course Description</label>
+                        <textarea id="course-description" name="course-description" rows="4" placeholder="Enter the course description" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Add Course</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- View Courses Section -->
+    <section id="view-courses" class="view-courses" style="display: none;">
+        <div class="container view-courses_container">
+            <h2>All Courses</h2>
+            <div id="courses-list" class="courses-list"></div>
+        </div>
+    </section>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
