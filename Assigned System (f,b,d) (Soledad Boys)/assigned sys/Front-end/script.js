@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1:5000'; // Flask backend
+const BASE_URL = 'http://127.0.0.1:5000';
 
 // Login API call
 loginForm.addEventListener('submit', async (e) => {
